@@ -8,7 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-<form action="trtpd.php" method="post">
+<form action="trtpd.php" method="post" enctype="multipart/form-data">
+        <!-- <label>Your Image File
+        <input type="file" name="myImage" accept="image/png, image/gif, image/jpeg" />
+        </label> -->
+        <label for="">Select image to upload:</label> 
+        <input type="file" name="fileToUpload" id="fileToUpload"><br>
         <label for="">nom</label><input type="text" name="nom" id="">
         <label for="">qte</label><input type="text" name="qte" id="">
         <label for="">prix</label><input type="text" name="prix" id="">
@@ -20,7 +25,7 @@
        $resultat->execute() ;
        $raw=$resultat->fetchAll();
    
-    ?>
+     ?>
         <select name="cat" id="">
             <?php foreach ($raw as $key) {
                 echo "<option value=" . $key['id'] . ">" . $key['nom']."</option>";
