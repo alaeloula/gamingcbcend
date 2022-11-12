@@ -22,7 +22,8 @@
                 <p><?php echo $key['prix']?></p>
                 <p><?php echo $key['id_cat']?></p>
                 <!-- <img src="<?php echo $key['image']?>" alt="llll" srcset=""> -->
-                <img src="..\ayh.png" alt="aaaaaaaaaaaaa" srcset="">
+                <img src="<?php echo $key['image']?>" alt="aaaaaaaaaaaaa" srcset="">
+                <!-- <img src="uploads/Capture d’écran (1).png" alt="aaaaaaaaaaaaa" srcset=""> -->
                 <?php echo"<a class='btn btn-info' href='modifierpd.php?id=$id'><i class='fa fa-trash-o fa-lg'></i> modifier</a>" ?>
                 <?php echo"<a class='btn btn-info' href='deletepd.php?id=$id'><i class='fa fa-trash-o fa-lg'></i> delete</a>" ?>
             </div>
